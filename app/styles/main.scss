@@ -1,0 +1,24 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$form-MaxWidth:330px;
+$button-MinWidth:120px;
+$form-ErrorMsg:#b94a48;
+
+.form-custom {
+    max-width: $form-MaxWidth;
+    margin: 0 auto;
+}
+
+.btn-size {
+    min-width:$button-MinWidth;
+    text-align:center;
+}
+
+.container{
+    .help-block {   
+        color:$form-ErrorMsg !important;
+    }
+} 

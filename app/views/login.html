@@ -1,0 +1,21 @@
+<form class="form-custom" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+    <!-- novalidate prevents HTML5 validation  -->
+    <div class="form-group text-center">
+        <h2>Please login</h2>
+    </div>
+    <br />
+    <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$pristine }">
+        <input type="text" name="username" class="form-control" ng-model="username" placeholder="Enter your username" required>
+        <p ng-show="userForm.username.$error.required && !userForm.username.$pristine" class="help-block">Your loginID is required.</p>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : userForm.pwd.$invalid && !userForm.pwd.$pristine }">
+        <input type="password" name="pwd" class="form-control" ng-model="pwd" placeholder="Enter your password" required>
+        <p ng-show="userForm.pwd.$error.required && !userForm.pwd.$pristine" class="help-block">Your password is required.</p>
+    </div>
+
+    <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary btn-size" ng-disabled="userForm.$invalid">Login</button>
+        <a href="/register" class="btn btn-default btn-size">Register</a>
+    </div>
+</form>
